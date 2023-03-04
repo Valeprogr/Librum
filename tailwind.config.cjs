@@ -14,12 +14,9 @@ module.exports = {
     },
     extend: {
       colors: {
-        "text" : "#242829",
-        "text-hover" : "#F8EDE3",
-        "CTA" : "#3795BD",
-        "card" : "#fff",
-        "background" : "#F9F5E7",
-        "mainColor" : "#A7727D"
+        "dark" : "#26282A",
+        "card" : "#FFFFFF",
+        "background" : "#f5f5f5"
       
       }
     },

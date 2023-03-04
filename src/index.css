@@ -11,8 +11,8 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background: #F8EDE3;
-  color: #242829;
+  background: #f5f5f5;
+  color: #282C35;
 }
 html {
   scroll-behavior: smooth;
