@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #F8EDE3;
+  color: #242829;
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+.opacity_half {
+  opacity: 90% !important;
+}
+
+
+/*----------  animation  ----------*/
+
+.animation_right {
+  animation: right 1s ease-in-out 0s 1 normal forwards;
+}
+.animation_left {
+  animation: left 1s ease 0s 1 normal forwards;
+}
+.animation_top { 
+  animation: top 2s ease-in-out 0s 1 normal forwards;
+}
+
+/*=============================================
+=            keyframes           =
+=============================================*/
+@keyframes right {
+	0% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes top {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(-100px);
+	}
+}
+
+@keyframes left {
+	0% {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+/*=====  End of Section comment block  ======*/
+
