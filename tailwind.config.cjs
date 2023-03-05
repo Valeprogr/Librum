@@ -16,7 +16,8 @@ module.exports = {
       colors: {
         "dark" : "#26282A",
         "card" : "#FFFFFF",
-        "background" : "#f5f5f5"
+        "background" : "#f5f5f5",
+        "input" : "#dbd7d2"
       
       }
     },
