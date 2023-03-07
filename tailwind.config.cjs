@@ -18,7 +18,8 @@ module.exports = {
         "dark" : "#26282A",
         "card" : "#FFFFFF",
         "background" : "#f5f5f5",
-        "input" : "#dbd7d2"
+        "input" : "#dbd7d2",
+        "hover" : "#2C3539"
       
       }
     },

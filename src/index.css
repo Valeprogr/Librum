@@ -27,13 +27,6 @@ a {
 .animation_right {
   animation: right 1s ease-in-out 0s 1 normal forwards;
 }
-.animation_left {
-  animation: left 1s ease 0s 1 normal forwards;
-}
-.animation_top { 
-  animation: top 2s ease-in-out 0s 1 normal forwards;
-}
-
 /*=============================================
 =            keyframes           =
 =============================================*/
@@ -49,26 +42,5 @@ a {
 	}
 }
 
-@keyframes top {
-	0% {
-		transform: translateY(0);
-	}
-
-	100% {
-		transform: translateY(-100px);
-	}
-}
-
-@keyframes left {
-	0% {
-		opacity: 0;
-		transform: translateX(-50px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
 
 /*=====  End of Section comment block  ======*/
