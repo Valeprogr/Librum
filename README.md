@@ -1,8 +1,6 @@
 # Liburm
 ## style modern minimal
 
-### Maybe make better names and more readable for components? 
-
 ## TODO list 
 - fix type of e.target in Sidebar.tsx 
 ### Navbar.tsx
