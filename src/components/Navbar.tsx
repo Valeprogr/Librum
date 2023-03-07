@@ -1,7 +1,6 @@
-import {  useState  } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from "react-router-dom"
 import {FiMenu} from 'react-icons/fi'
-import {GrClose} from 'react-icons/gr'
 
 import CTAButton from "./CTAButton"
 import LgDownNavbar from './navbar/LgDownNavbar'
@@ -17,10 +16,15 @@ const userCloseHandler = () => {
 const burgerCloseHandler = () => {
   setBurgerOpen(false)
 }
+useEffect(() => {
+  if(burgerOpen === true) {
+  document.body.style.overflow = 'hidden';
+  }
+},[burgerOpen] )
 
   return (
     <div className="bg-card shadow-md">
-      <div className=" max-w-[1300px] mx-auto p-1 flex items-center justify-between px-6 md:px-20 relative">
+      <div className=" max-w-[1300px] mx-auto p-1 flex items-center justify-between px-6 md:px-20 relative ">
         {/**title */}
         <Link to ='/' className="text-2xl lg:text-3xl tracking-wider font-bold cursor-pointer p-2  hover:bg-dark/10 rounded-lg transition-all duration-300 ">Librum</Link>
         {/* Menu mob*/}
@@ -37,10 +41,10 @@ const burgerCloseHandler = () => {
         {
           userOpen && (
             <div className='absolute bg-card shadow-md top-12 right-0 p-4 rounded-lg transition-all duration-300'>
-            <NavbarLink clickEvent={userCloseHandler} path='/create-product' text='Create Product' icon='../icons/createProduct.svg' />
-            <NavbarLink clickEvent={userCloseHandler} path='/admin-order' text='Admin Orders' icon='../icons/adminOrders.svg' />
-            <NavbarLink clickEvent={userCloseHandler} path='/edit-profle' text='Edit Profil' icon='../icons/editProfil.svg' />
-            <NavbarLink clickEvent={userCloseHandler} path='/orders' text='Orders' icon='../icons/orders.svg' />
+            <NavbarLink cssPropText='text-[14px]' cssPropImg='p-2 w-8'  clickEvent={userCloseHandler} path='/create-product' text='Create Product' icon='../icons/createProduct.svg' />
+            <NavbarLink cssPropText='text-[14px]' cssPropImg='p-2 w-8' clickEvent={userCloseHandler} path='/admin-order' text='Admin Orders' icon='../icons/adminOrders.svg' />
+            <NavbarLink cssPropText='text-[14px]' cssPropImg='p-2 w-8' clickEvent={userCloseHandler} path='/edit-profil' text='Edit Profil' icon='../icons/editProfil.svg' />
+            <NavbarLink cssPropText='text-[14px]' cssPropImg='p-2 w-8' clickEvent={userCloseHandler} path='/orders' text='Orders' icon='../icons/orders.svg' />
 
             </div>
           )
