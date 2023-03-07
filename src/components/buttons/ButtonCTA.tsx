@@ -2,11 +2,11 @@ import './buttonCTA.css'
 
 interface ButtonCTA {
     children: React.ReactNode
-    to?: string 
+
     }
-const ButtonCTA = ({children,to}: ButtonCTA) => {
+const ButtonCTA = ({children}: ButtonCTA) => {
   return (
-    <button className='button hover'>{children}</button>
+    <button className='button cursor-pointer hover'>{children}</button>
   )
 }
 

@@ -6,7 +6,7 @@ interface ButtonIconDouble {
 
 const ButtonIconDouble = ({children}: ButtonIconDouble) => {
   return (
-    <button className="hover relative p-[9px] flex">{children}</button>
+    <button className="w-full hover relative p-[9px] flex cursor-pointer">{children}</button>
   )
 }
 

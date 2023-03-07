@@ -4,11 +4,11 @@ import MobNavbar from "./navbar/MobNavbar"
 
 const Navbar = () => {
   return (
-    <div>
+    <>
      <MobNavbar />
      <LgNavbar />   
      <DownLgNavbar />
-    </div>
+    </>
   )
 }
 

@@ -18,7 +18,7 @@ const RegistePage = () => {
    </div>
   </form>
   <div className="flex w-full px-[42px]">
-  <FormButton>Login</FormButton>
+  <FormButton>Register</FormButton>
   </div>
 
     </div>
