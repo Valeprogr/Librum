@@ -11,14 +11,14 @@ const Sidebar = ({closeEvent}: Sidebar) => {
     const element = useRef<HTMLDivElement>()
     
     useEffect(() => {
-        const handler = (e : MouseEvent | EventTarget   ) => {
+        const handler = (e :   React.ChangeEvent  ) => {
             if(!element.current?.contains(e.target)) {
                 closeEvent()
             }
         }
         document.addEventListener('click', handler, true)
         return () => {
-            document.removeEventListener('click', handler)
+        document.removeEventListener('click', handler )
         }
     }, [])
 
@@ -27,7 +27,7 @@ const Sidebar = ({closeEvent}: Sidebar) => {
     <button className='absolute top-4 right-4'><GrClose className='text-2xl font-bold' onClick={closeEvent}/></button>
    <div className="flex flex-col  w-full pt-2">
   <NavbarLink clickEvent={closeEvent} cssPropText='text-lg' cssPropImg='w-10 p-2' path='/' icon='../icons/home.svg' text='Home' />
-  <NavbarLink clickEvent={closeEvent} cssPropText='text-lg' cssPropImg='w-10 p-2' path='/' icon='../icons/categories.svg' text='Books' />
+  <NavbarLink clickEvent={closeEvent} cssPropText='text-lg' cssPropImg='w-10 p-2' path='/books' icon='../icons/categories.svg' text='Books' />
   <NavbarLink clickEvent={closeEvent} cssPropText='text-lg' cssPropImg='w-10 p-2' path='/about' icon='../icons/about.svg' text='About' />
   <NavbarLink clickEvent={closeEvent} cssPropText='text-lg' cssPropImg='w-10 p-2' path='/location' icon='../icons/location.svg' text='Location' />
   <NavbarLink clickEvent={closeEvent} cssPropText='text-lg' cssPropImg='w-10 p-2' path='/books' icon='../icons/book.svg' text='Writers' />
