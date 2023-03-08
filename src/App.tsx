@@ -1,4 +1,4 @@
-import { AboutPage, EditProfilePage, HomePage, LocationPage, LoginPage, SignUpPage } from './pages'
+import { AboutPage, BooksPage, EditProfilePage, HomePage, LocationPage, LoginPage, SignUpPage } from './pages'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Navbar from './components/Navbar'
 
@@ -14,7 +14,7 @@ function App() {
   <Route path='/login' element={<LoginPage />} />
   <Route path='/sign-up' element={<SignUpPage />} />
   <Route path='/edit-profil' element={<EditProfilePage />} />
-
+  <Route path='/books' element={<BooksPage/>} />
   </Routes>
   
     </BrowserRouter>
