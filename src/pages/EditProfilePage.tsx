@@ -29,7 +29,7 @@ const EditProfilePage = () => {
 
   </div> 
   </div>
-    </div>
+  </div>
     
   )
 }
