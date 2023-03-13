@@ -13,7 +13,7 @@ export const useHttp = () => {
             if (!response.ok) {
                 throw new Error(data.message);
             }
-            return data
+            return data;
         } catch (error) {
           throw error
         }
