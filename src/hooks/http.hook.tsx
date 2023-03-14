@@ -4,7 +4,7 @@ export const useHttp = () => {
     const request = useCallback(async (url: any, method = 'GET', body: any) => {
         try {
             if (body) {
-                body = JSON.stringify({email: body});
+                body = JSON.stringify({email: body, books: body});
                 
             }
             let headers = { 'Content-Type': 'application/json' };
