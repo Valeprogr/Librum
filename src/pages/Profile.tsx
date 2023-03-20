@@ -17,14 +17,14 @@ export const Profile = () => {
                   
 
                     <>
-<section className="pt-16 bg-blueGray-50">
+<section className="m-0 bg-blueGray-50">
 <div className="w-full lg:w-4/16 px-4 mx-auto">
-  <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg mt-16">
+  <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg mt-12">
     <div className="px-6">
       <div className="flex flex-wrap justify-center">
         <div className="w-full px-4 flex justify-center">
-          <div className="relative">
-            <img src={user.picture} alt={user.name} className="shadow-xl rounded-full h-auto align-middle w-[200px] h-[200px]" />
+          <div className="relative h-auto">
+            <img src={user.picture} alt={user.name} className="shadow-xl rounded-full align-middle w-[200px] h-[200px]" />
           </div>
         </div>
         <div className="w-full px-4 text-center mt-2">
