@@ -17,7 +17,7 @@ export const Profile = () => {
                   
 
                     <>
-<section className="m-0 bg-blueGray-50">
+<section className="px-10 bg-blueGray-50">
 <div className="w-full lg:w-4/16 px-4 mx-auto">
   <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg mt-12">
     <div className="px-6">
