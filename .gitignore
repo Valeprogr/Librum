@@ -28,4 +28,4 @@ dist-ssr
 .env.[mode]         # only loaded in specified mode
 .env.[mode].local 
 
-VITE_*
+*.local
