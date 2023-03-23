@@ -1,4 +1,4 @@
-import { AboutPage, BooksPage, EditProfilePage, HomePage, LocationPage, LoginPage, SignUpPage } from './pages';
+import { AboutPage, BooksPage, EditProfilePage, HomePage, LocationPage, LoginPage, SignUpPage, Cart } from './pages';
 import { BrowserRouter, json, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Profile from './pages/Profile';
@@ -31,7 +31,7 @@ function App() {
                 <Route path='/edit-profil' element={<EditProfilePage />} />
                 <Route path='/books' element={<BooksPage />} />
                 <Route path='/profile' element={<Profile />} />
-
+                <Route path='/cart' element={<Cart />} />
               </Routes>
             </div>
           </BrowserRouter>

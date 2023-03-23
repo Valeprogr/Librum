@@ -5,6 +5,7 @@ import LoginPage from "./LoginPage";
 import SignUpPage from "./SignUpPage";
 import EditProfilePage from "./EditProfilePage";
 import BooksPage from "./BooksPage";
+import { Cart } from "./Cart";
 export {
     HomePage,
     AboutPage,
@@ -12,5 +13,6 @@ export {
     LoginPage,
     SignUpPage,
     EditProfilePage,
-    BooksPage
+    BooksPage,
+    Cart
 }
