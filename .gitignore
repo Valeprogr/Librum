@@ -23,7 +23,9 @@ dist-ssr
 *.sln
 *.sw?
 
-.env               
+.env                # loaded in all cases
 .env.local          # loaded in all cases, ignored by git
 .env.[mode]         # only loaded in specified mode
 .env.[mode].local 
+
+VITE_*
