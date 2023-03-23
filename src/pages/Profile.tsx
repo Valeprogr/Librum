@@ -51,7 +51,7 @@ export const Profile = () => {
         </div>
       </div>
       <div className="text-center mt-12">
-        <h3 className="text-xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
+        <h3 className="text-xl font-semibold leading-normal mb-2 text-blueGray-700">
           {user.nickname}
         </h3>
         <div className="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
@@ -66,13 +66,13 @@ export const Profile = () => {
       <div className="mt-10 py-10 border-t border-blueGray-200 text-center">
         <div className="flex flex-wrap justify-center">
           <div className="w-full lg:w-9/12 px-4">
-            <p className="mb-4 text-lg leading-relaxed text-blueGray-700">
+            <p className="mb-4 leading-relaxed text-blueGray-700">
                                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                                                     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
-            <a href="javascript:void(0);" className="font-normal text-red-500">
+            <a href="javascript:void(0);" className="font-bold text-red-500 uppercase">
               Edit Profile
             </a>
           </div>
