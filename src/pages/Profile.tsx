@@ -5,7 +5,7 @@ import { Spinner } from "../components/spinner/Spinner";
 
 export const Profile = () => {
     const { user, isAuthenticated, isLoading } = useAuth0();
-    console.log(user)
+   //console.log(user)
 
     if (isLoading) {
         return <Spinner />;
@@ -19,7 +19,7 @@ export const Profile = () => {
                     <>
 <section className="px-10 bg-blueGray-50">
 <div className="w-full lg:w-4/16 px-4 mx-auto">
-  <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg mt-12">
+  <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg mt-4">
     <div className="px-6">
       <div className="flex flex-wrap justify-center">
         <div className="w-full px-4 flex justify-center">
