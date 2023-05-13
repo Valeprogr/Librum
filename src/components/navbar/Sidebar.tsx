@@ -1,5 +1,4 @@
 import { ChangeEvent, RefObject, useEffect, useRef, useState } from 'react';
-//import { useHttp } from '../../hooks/http.hook';
 import { useAuth0 } from "@auth0/auth0-react";
 import { GrClose } from "react-icons/gr"
 import NavbarLink from "./NavbarLink"

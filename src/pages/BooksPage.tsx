@@ -1,27 +1,30 @@
 import { useState, useRef, LegacyRef, useEffect } from 'react'
-import { useHttp } from '../hooks/http.hook'
 import { GrClose } from 'react-icons/gr'
 import BookCard from '../components/BookCard'
 import CTAButton from '../components/CTAButton'
 import Modal from '../components/Modal'
 import { bookProps } from '../types/bookProps'
-
-const url = "http://localhost:9090/books/get";
+import BookDataService from "../services/BookService";
 
 
 
 const BooksPage = () => {
-  const { request } = useHttp();
-  const [data, setData] = useState<bookProps[]>();
+  const [data, setData] = useState<bookProps[]>([]);
   const [categoriesOpen, setCategoriesOpen] = useState(false)
   const element = useRef<HTMLDivElement>()
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const getData = async () => {
-      const data = await request(url, 'GET', null);
-      console.log(data.books)
-      setData(prev => data.books)
+      try {
+        let data = await BookDataService.getAll() as any
+        data = data.data.books 
+        console.log(data)
+          setData(data)
+      }
+      catch (error) {
+        console.log(error)
+      }
     }
     getData()
   }, []);
