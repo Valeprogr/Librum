@@ -1,30 +1,32 @@
 import { useEffect, useState } from 'react'
 import { Link } from "react-router-dom"
 import { FiMenu } from 'react-icons/fi'
-import { useHttp } from "../hooks/http.hook";
 import { useAuth0 } from "@auth0/auth0-react";
-
 import CTAButton from "./CTAButton"
 import LgDownNavbar from './navbar/LgDownNavbar'
 import NavbarLink from './navbar/NavbarLink'
 import Sidebar from './navbar/Sidebar'
 import LoginButton from './LoginButton'
 import LogoutButton from './LogoutButton'
+import { IUserData } from '../types/user.type';
+import UserDataServices from "../services/UserService";
 
 const Navbar = () => {
   const [userOpen, setUserOpen] = useState(false)
   const [burgerOpen, setBurgerOpen] = useState(false)
-
+  const [data, setData] = useState<IUserData>({
+    email: '',
+    books: ''
+});
 
   const { isAuthenticated, isLoading, user } = useAuth0();
-  const { request } = useHttp();
 
-  const url = 'http://localhost:9090/user/create';
 
   useEffect(() => {
     if (isAuthenticated) {
       if (user) {
-        const data = request(url, 'POST', user.email);
+        setData({email: user.email as string})
+        UserDataServices.create(data)
       }
     }
   }, [])
