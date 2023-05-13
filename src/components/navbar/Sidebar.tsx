@@ -1,27 +1,31 @@
 import { ChangeEvent, RefObject, useEffect, useRef, useState } from 'react';
-import { useHttp } from '../../hooks/http.hook';
+//import { useHttp } from '../../hooks/http.hook';
 import { useAuth0 } from "@auth0/auth0-react";
 import { GrClose } from "react-icons/gr"
 import NavbarLink from "./NavbarLink"
 import { BsFacebook, BsTwitter, BsInstagram, BsGithub } from 'react-icons/bs'
 import LoginButton from '../LoginButton';
 import LogoutButton from '../LogoutButton';
+import UserDataServices from "../../services/UserService"
+import  {IUserData}  from '../../types/user.type';
 
 interface Sidebar {
     closeEvent: () => void
 }
 
 const Sidebar = ({ closeEvent }: Sidebar) => {
-    const [data, setData] = useState();
+    const [data, setData] = useState<IUserData>({
+        email: '',
+        books: ''
+    });
     const { isAuthenticated, isLoading, user } = useAuth0();
-    const { request } = useHttp();
-
-    const url = 'http://localhost:9090/user/create';
 
     useEffect(() => {
         if (isAuthenticated) {
             if (user) {
-                const data = request(url, 'POST', user.email);
+                setData({email: user.email as string})
+                //const data = request(url, 'POST', user.email);
+                UserDataServices.create(data)
             }
         }
     }, [])
