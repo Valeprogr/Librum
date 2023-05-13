@@ -11,6 +11,10 @@ class CartDataService {
     post(data:IUserData) {
         return http.post<Array<IUserData>>('user/cartAddBook', data)
     }
+
+    delete(data: any) {
+        return http.delete<Array<IUserData>>('user/cartDeleteBook', data)
+    }
 }
 
 export default new CartDataService();
