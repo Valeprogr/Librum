@@ -101,7 +101,7 @@ const maxScrollWidth = useRef(0);
   }, []);
     return(
 <>
-<div className="carousel my-12 mx-auto">
+<div className="carousel my-12 mx-auto  rounded-sm shadow-xl h-auto p-12">
     <h2 className="text-4xl leading-8 font-semibold mb-12 text-slate-700">
       Author of The Month
     </h2>
@@ -158,7 +158,7 @@ const maxScrollWidth = useRef(0);
           return (
             <div
               key={index}
-              className="carousel-item text-center relative w-64 h-64 snap-start"
+              className="carousel-item text-center relative w-64 h-[440px] snap-start"
             >
               <a
                 href=""
@@ -168,7 +168,7 @@ const maxScrollWidth = useRef(0);
                 <img
                   src={resource.imageUrl || ''}
                   alt={resource.title}
-                  className="w-full aspect-square hidden"
+                  className="w-full  aspect-square hidden"
                 />
               </a>
               <a
