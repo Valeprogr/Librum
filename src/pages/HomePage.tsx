@@ -7,7 +7,7 @@ const HomePage = () => {
         <Searchbar />
         <div className="flex">
           <div className="w-24 px-2 font-semibold cursor-pointer">CUPON30%</div>
-          <div className="w-24 px-2 font-semibold text-red-600">SALE</div>
+          <div className="w-24 px-2 font-semibold text-red-600 cursor-pointer">SALE</div>
         </div>  
       </div>
 
