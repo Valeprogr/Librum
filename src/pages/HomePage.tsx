@@ -24,9 +24,7 @@ const HomePage = () => {
       <div style={style}>
         <div className="absolute w-full lg:w-[500px] bg-black opacity-80 lg:bg-transparent lg:opacity-100 lg:right-[28px] 2xl:right-52 top-1/4 border border-white p-10">
           <h1 className="text-5xl font-bold mb-4">Welcome to Librum</h1>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          <p className="leading-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis fugiat architecto veritatis ab! Odio maxime eum minus odit distinctio nam ut explicabo. Numquam error obcaecati distinctio magni reprehenderit, explicabo ipsum! Dolorum nobis quae aliquid earum provident ipsam nemo ea quia, quos in.</p>
           <p className="text-xl font-mono mt-4">Knowledge is power</p>
           <p className="text-l font-mono">Sir Francis Bacon</p>
         </div>
