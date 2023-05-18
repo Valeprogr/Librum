@@ -36,8 +36,8 @@ export const CreateProduct = () => {
     
     return (
     <>
-    <div className="flex justify-center items-center py-10">
-    <div className=" bg-card shadow-lg rounded-lg w-auto md:w-[600px] p-20">
+    <div className="h-auto flex justify-center items-center py-10">
+    <div className="h-auto bg-card shadow-lg rounded-lg w-auto md:w-[600px] p-20">
     <h2 className="text-3xl font-bold text-center">Add book!</h2>
     <p className="pt-2 text-dark/70 text-sm">Welcome back here you can add a book to the online bookstore.</p>
                     <form className="my-4 text-slate-500 leading-relaxed w-auto">
@@ -46,7 +46,7 @@ export const CreateProduct = () => {
                           <label className='font-bold'>Author :</label>
                         <input className='h-10 border mt-1 rounded px-4 w-full bg-gray-50' type="text" name="author" value={form.author} onChange={changeHandler}></input>
                         <label className='font-bold'>Description :</label>
-                        <textarea  className=' border mt-1 rounded px-4 w-full bg-gray-50 h-auto' type="textarea"  placeholder="write a little summary..." rows="10"   name="description" value={form.description}  onChange={changeHandler}></textarea>
+                        <textarea  className=' border mt-1 rounded px-4 w-full bg-gray-50' type="textarea"  placeholder="write a little summary..." rows="6"   name="description" value={form.description}  onChange={changeHandler}></textarea>
                           <label className='font-bold'>Genre :</label>
                           <input className='h-10 border mt-1 rounded px-4 w-full bg-gray-50' type="text" name="genre" value={form.genre} onChange={changeHandler}></input>
                           <label className='font-bold'>Stock :</label>
