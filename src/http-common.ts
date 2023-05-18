@@ -1,6 +1,6 @@
 import axios from "axios";
 
 export default axios.create({
-    baseURL: "http://localhost:9090/",
+    baseURL: "https://librum-server.vercel.app/",
     headers: { 'Content-Type': 'application/json' }
 });
