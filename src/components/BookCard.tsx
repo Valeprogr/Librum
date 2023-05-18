@@ -1,5 +1,5 @@
-import CTAButton from "./CTAButton"
-import { bookProps } from "../types/bookProps"
+import CTAButton from "./CTAButton";
+import { bookProps } from "../types/BookProps";
 
 interface IBookCard {
   clickEvent?: () => void,
@@ -11,7 +11,7 @@ const BookCard = ({ clickEvent, props }: IBookCard, key: number) => {
   
   return (
     <div key={key} className='w-[290px] flex flex-col justify-start py-2 pt-8 items-center px-4'>
-      <img src='../book.jpg' alt='book' className='w-[290px] rounded-lg bg-card p-5 ' />
+      <img src={props.imageUrl} alt='book' className='w-[290px] rounded-lg bg-card p-5 ' />
       <div className='pt-3'>
         <h2 className='text-[20px] font-[500]'>{props.title}</h2>
         <h3 className="text-[18px] font-[400] ">{props.author}</h3>
