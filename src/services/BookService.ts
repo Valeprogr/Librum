@@ -1,5 +1,5 @@
 import http from "../http-common";
-import { bookProps } from "../types/bookProps";
+import { bookProps } from "../types/BookProps";
 
 class BookDataService {
     create(data:bookProps) {
