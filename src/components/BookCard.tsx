@@ -1,5 +1,6 @@
-import CTAButton from "./CTAButton"
 import { bookProps } from "../types/bookProps"
+import CTAButton from "./CTAButton"
+
 
 interface IBookCard {
   clickEvent?: () => void,
