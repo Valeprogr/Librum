@@ -41,7 +41,7 @@ export const CreateProduct = () => {
             })  
             },1000)
         } catch (error:any) {
-            toast.error('Error: '+ error.response.status +" " +'Please fill out the form below,all information is required!',{
+            toast.error('Information missing!',{
                 position: toast.POSITION.TOP_CENTER
             })
         }
