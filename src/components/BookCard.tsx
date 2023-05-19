@@ -1,5 +1,4 @@
-import CTAButton from "./CTAButton";
-import { bookProps } from "../types/BookProps";
+
 
 interface IBookCard {
   clickEvent?: () => void,

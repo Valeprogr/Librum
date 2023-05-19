@@ -7,6 +7,7 @@ import LoginButton from '../LoginButton';
 import LogoutButton from '../LogoutButton';
 import UserDataServices from "../../services/UserService"
 import  {IUserData}  from '../../types/user.type';
+import { useClickOutside } from '../../hooks/useClickOutside';
 
 interface Sidebar {
     closeEvent: () => void
@@ -28,23 +29,15 @@ const Sidebar = ({ closeEvent }: Sidebar) => {
             }
         }
     }, [])
-    const element = useRef<HTMLDivElement>()
+    const element = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        const handler = (e: React.ChangeEvent) => {
-            if (!element.current?.contains(e.target)) {
-                closeEvent()
-            }
-        }
-        document.addEventListener('click', handler, true)
-        return () => {
-            document.removeEventListener('click', handler)
-        }
-    }, [])
+   
+
+    useClickOutside(element, closeEvent)
 
     return (
 
-        <div ref={element as RefObject<HTMLDivElement>} className='absolute  top-0 right-0 w-[240px] h-screen max-h-screen  bg-card shadow-lg animation_right flex items-center justify-between flex-col px-5 py-12 pt-16'>
+        <div ref={element} className='absolute  top-0 right-0 w-[240px] h-screen max-h-screen  bg-card shadow-lg animation_right flex items-center justify-between flex-col px-5 py-12 pt-16 z-10'>
             <button className='absolute top-4 right-4'><GrClose className='text-2xl font-bold' onClick={closeEvent} /></button>
             <div className="flex flex-col  w-full pt-2">
                 <NavbarLink clickEvent={closeEvent} cssPropText='text-lg' cssPropImg='w-10 p-2' path='/' icon='../icons/home.svg' text='Home' />
