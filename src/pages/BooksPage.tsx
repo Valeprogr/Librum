@@ -3,7 +3,7 @@ import { GrClose } from 'react-icons/gr'
 import BookCard from '../components/BookCard'
 import CTAButton from '../components/CTAButton'
 import Modal from '../components/Modal'
-import { bookProps } from '../types/bookProps'
+import { bookProps } from '../types/BookProps'
 import BookDataService from "../services/BookService";
 import { useClickOutside } from '../hooks/useClickOutside'
 

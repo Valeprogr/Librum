@@ -101,7 +101,7 @@ const maxScrollWidth = useRef(0);
   }, []);
     return(
 <>
-<div className="carousel my-12 mx-auto  rounded-sm shadow-xl h-auto p-12">
+<div className="carousel my-12 mx-auto  rounded-sm shadow-xl h-auto lg:p-12">
     <h2 className="text-4xl leading-8 font-semibold mb-12 text-slate-700">
       Author of The Month
     </h2>
