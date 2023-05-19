@@ -43,7 +43,7 @@ const Navbar = () => {
   }, [burgerOpen])
 
   return (
-    <div className="bg-card shadow-md">
+    <div className="bg-card ">
       <div className=" max-w-[1300px] mx-auto p-1 flex items-center justify-between px-6 md:px-20 relative ">
         {/**title */}
         <Link to='/' className="text-2xl lg:text-3xl tracking-wider font-bold cursor-pointer p-2  hover:bg-dark/10 rounded-lg transition-all duration-300 ">Librum</Link>
@@ -71,7 +71,7 @@ const Navbar = () => {
           <CTAButton clickEvent={() => setUserOpen(!userOpen)} cssProps="flex items-center justify-center px-6" ><img src='../icons/login.svg' alt='user profile' /><img src='../icons/arrowDown.svg' alt='arrow' className={userOpen ? `rotate-90 transition-all duration-300` : ''} /></CTAButton>
           {
             userOpen && (
-              <div className='absolute bg-card shadow-md top-12 right-0 p-4 rounded-lg transition-all duration-300'>
+              <div className='absolute bg-card shadow-md top-12 right-0 p-4 rounded-lg transition-all duration-300 '>
                 <NavbarLink cssPropText='text-[14px]' cssPropImg='p-2 w-8' clickEvent={userCloseHandler} path='/create-product' text='Create Product' icon='../icons/createProduct.svg' />
                 <NavbarLink cssPropText='text-[14px]' cssPropImg='p-2 w-8' clickEvent={userCloseHandler} path='/admin-order' text='Admin Orders' icon='../icons/adminOrders.svg' />
                 <NavbarLink cssPropText='text-[14px]' cssPropImg='p-2 w-8' clickEvent={userCloseHandler} path='/edit-profil' text='Edit Profil' icon='../icons/editProfil.svg' />
