@@ -6,5 +6,6 @@ export type bookProps = {
     description: string,
     genre: string,
     stock: number,
-    imageUrl:string
+    imageUrl: string,
+    price:string
   }
