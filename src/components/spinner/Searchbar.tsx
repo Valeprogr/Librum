@@ -4,7 +4,7 @@ import React from "react";
 const Searchbar = () => {
     return (
         <>
-    <div className="py-3 w-96">
+    <div className="lg:py-3 lg:w-96">
      <form>   
       <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
         <div className="relative">
