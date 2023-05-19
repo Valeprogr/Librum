@@ -5,13 +5,14 @@ import CTAButton from '../components/CTAButton'
 import Modal from '../components/Modal'
 import { bookProps } from '../types/bookProps'
 import BookDataService from "../services/BookService";
+import { useClickOutside } from '../hooks/useClickOutside'
 
 
 
 const BooksPage = () => {
   const [data, setData] = useState<bookProps[]>([]);
   const [categoriesOpen, setCategoriesOpen] = useState(false)
-  const element = useRef<HTMLDivElement>()
+  const element = useRef<HTMLDivElement>(null)
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
@@ -40,18 +41,8 @@ const BooksPage = () => {
   const closeHandler = () => {
     setCategoriesOpen(false)
   }
-  useEffect(() => {
-    const handler = (e: React.ChangeEvent) => {
-      if (!element.current?.contains(e.target)) {
-        closeHandler()
-      }
-    }
-    document.addEventListener('click', handler, true)
-    return () => {
-      document.removeEventListener('click', handler)
-    }
-  }, [])
-
+  
+useClickOutside(element, closeHandler)
   const modal = (
     <Modal onClose={handleClose}>
       here come info about book and picture
@@ -65,7 +56,7 @@ const BooksPage = () => {
           <CTAButton clickEvent={() => setCategoriesOpen(true)} cssProps='md:hidden flex justify-center gap-4 items-center px-6' >Geners <img src='../icons/arrowDown.svg' alt='arrow' className={categoriesOpen ? `rotate-90 transition-all duration-300 w-6` : 'w-6'} /></CTAButton>
           {
             categoriesOpen && (
-              <div ref={element as LegacyRef<HTMLDivElement>} className='bg-card p-2 py-5 pt-14 flex flex-wrap justify-center items-center gap-2 w-full absolute top-0 left-0 right-0 rounded-lg transition-all duration-500'>
+              <div ref={element} className='bg-card p-2 py-5 pt-14 flex flex-wrap justify-center items-center gap-2 w-full absolute top-0 left-0 right-0 rounded-lg transition-all duration-500'>
                 <button className='absolute top-4 right-4'><GrClose className='text-2xl font-bold' onClick={closeHandler} /></button>
                 <CTAButton cssProps='text-[14px]'>Category1</CTAButton>
                 <CTAButton cssProps='text-[14px]'>Category1</CTAButton>
