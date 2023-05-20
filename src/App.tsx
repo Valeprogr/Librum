@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Profile from './pages/Profile';
 import { useAuth0 } from '@auth0/auth0-react';
 import { Spinner } from './components/spinner/Spinner';
-
+import { ShoppingCartProvider } from './context/ShoppingCartContext';
 
 
 
@@ -16,7 +16,7 @@ function App() {
   }
 
   return (
-    <>
+    <ShoppingCartProvider>
       {
         isAuthenticated ?
           <BrowserRouter>
@@ -51,7 +51,7 @@ function App() {
             </div>
           </BrowserRouter>
       }
-    </>
+    </ShoppingCartProvider>
   )
 }
 
