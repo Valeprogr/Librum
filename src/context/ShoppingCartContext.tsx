@@ -46,9 +46,24 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
             }
         })   
     }
-    
+    function decreaseCartQuantity(id:string) {
+        setCartItems(currItems => {
+            if (currItems.find(item => item.id === id)?.quantity === 1) {
+                return currItems.filter(item => item.id !== id)
+            } else {
+                return currItems.map(item => {
+                    if (item.id === id) {
+                        return {...item, quantity: item.quantity - 1}
+                    } else {
+                        return item
+                    }
+                })
+            }
+        })   
+    }
+
     return(
-    <ShoppingCartContex.Provider value={{getItemQuantity, increaseCartQuantity}}>
+    <ShoppingCartContex.Provider value={{getItemQuantity, increaseCartQuantity,decreaseCartQuantity}}>
         {children}
     </ShoppingCartContex.Provider>
 )}
