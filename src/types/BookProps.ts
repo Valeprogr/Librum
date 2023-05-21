@@ -1,6 +1,6 @@
 
 export type bookProps = {
-    _id?: string,
+    _id?: any,
     title: string,
     author: string,
     description: string,
