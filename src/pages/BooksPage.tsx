@@ -20,7 +20,7 @@ const BooksPage = () => {
       try {
         let data = await BookDataService.getAll() as any
         data = data.data.books 
-        console.log(data)
+        //console.log(data)
           setData(data)
       }
       catch (error) {

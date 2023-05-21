@@ -10,10 +10,12 @@ import LoginButton from './LoginButton'
 import LogoutButton from './LogoutButton'
 import { IUserData } from '../types/user.type';
 import UserDataServices from "../services/UserService";
+import { useShoppingCart } from '../context/ShoppingCartContext';
 
 const Navbar = () => {
   const [userOpen, setUserOpen] = useState(false)
   const [burgerOpen, setBurgerOpen] = useState(false)
+  const { cartQuantity } = useShoppingCart();
   const [data, setData] = useState<IUserData>({
     email: '',
     books: ''
@@ -60,7 +62,7 @@ const Navbar = () => {
           {isAuthenticated ?
             <>
             
-              <Link to='/cart' className="text-lg font-[500] px-3  cursor-pointer p-[6px]  hover:bg-dark/10 rounded-lg transition-all duration-300 relative">Cart <span className='absolute flex items-center justify-center font-bold bg-red-500 w-4 h-4 rounded-full text-[12px] top-5 left-11'>3</span></Link>
+              <Link to='/cart' className="text-lg font-[500] px-3  cursor-pointer p-[6px]  hover:bg-dark/10 rounded-lg transition-all duration-300 relative">Cart{cartQuantity === 0 ? null :<span className='absolute flex items-center justify-center font-bold bg-red-500 w-4 h-4 rounded-full text-[12px] top-5 left-11'>{cartQuantity}</span> } </Link>
               <LogoutButton />
               </>
             :
