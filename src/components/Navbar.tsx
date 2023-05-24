@@ -45,8 +45,8 @@ const Navbar = () => {
   }, [burgerOpen])
 
   return (
-    <div className="bg-card ">
-      <div className=" max-w-[1300px] mx-auto p-1 flex items-center justify-between px-6 md:px-20 relative ">
+    <div className="bg-card w-auto">
+      <div className=" max-w-[1300px] mx-auto p-1 flex items-center justify-between px-6 md:px-20 relative z-40">
         {/**title */}
         <Link to='/' className="text-2xl lg:text-3xl tracking-wider font-bold cursor-pointer p-2  hover:bg-dark/10 rounded-lg transition-all duration-300 ">Librum</Link>
         {/* Menu mob*/}
