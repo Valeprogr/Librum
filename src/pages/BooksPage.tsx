@@ -30,7 +30,6 @@ const BooksPage = () => {
     getData()
   }, []);
  
-  //console.log(data)
   const handleClick = () => {
     setShowModal(true);
   };
@@ -58,25 +57,25 @@ useClickOutside(element, closeHandler)
             categoriesOpen && (
               <div ref={element} className='bg-card p-2 py-5 pt-14 flex flex-wrap justify-center items-center gap-2 w-full absolute top-0 left-0 right-0 rounded-lg transition-all duration-500'>
                 <button className='absolute top-4 right-4'><GrClose className='text-2xl font-bold' onClick={closeHandler} /></button>
-                <CTAButton cssProps='text-[14px]'>Category1</CTAButton>
-                <CTAButton cssProps='text-[14px]'>Category1</CTAButton>
-                <CTAButton cssProps='text-[14px]'>Category1</CTAButton>
-                <CTAButton cssProps='text-[14px]'>Category1</CTAButton>
-                <CTAButton cssProps='text-[14px]'>Category1</CTAButton>
-                <CTAButton cssProps='text-[14px]'>Category1</CTAButton>
-                <CTAButton cssProps='text-[14px]'>Category1</CTAButton>
+          <CTAButton cssProps='text-[14px]'>Novel</CTAButton>
+          <CTAButton cssProps='text-[14px]'>Biography</CTAButton>
+          <CTAButton cssProps='text-[14px]'>Fantasy</CTAButton>
+          <CTAButton cssProps='text-[14px]'>Horror</CTAButton>
+          <CTAButton cssProps='text-[14px]'>Literature</CTAButton>
+          <CTAButton cssProps='text-[14px]'>Romance</CTAButton>
+          <CTAButton cssProps='text-[14px]'>Thriller</CTAButton>
               </div>
             )
           }
         </div>
         <div className='hidden gap-3 md:flex justify-center items-center'>
-          <CTAButton cssProps='text-[14px]'>Category1</CTAButton>
-          <CTAButton cssProps='text-[14px]'>Category1</CTAButton>
-          <CTAButton cssProps='text-[14px]'>Category1</CTAButton>
-          <CTAButton cssProps='text-[14px]'>Category1</CTAButton>
-          <CTAButton cssProps='text-[14px]'>Category1</CTAButton>
-          <CTAButton cssProps='text-[14px]'>Category1</CTAButton>
-          <CTAButton cssProps='text-[14px]'>Category1</CTAButton>
+          <CTAButton cssProps='text-[14px]'>Novel</CTAButton>
+          <CTAButton cssProps='text-[14px]'>Biography</CTAButton>
+          <CTAButton cssProps='text-[14px]'>Fantasy</CTAButton>
+          <CTAButton cssProps='text-[14px]'>Horror</CTAButton>
+          <CTAButton cssProps='text-[14px]'>Literature</CTAButton>
+          <CTAButton cssProps='text-[14px]'>Romance</CTAButton>
+          <CTAButton cssProps='text-[14px]'>Thriller</CTAButton>
         </div>
         <div className='pt-4 flex flex-wrap items-center justify-center'>
 

@@ -22,7 +22,10 @@ const Navbar = () => {
 });
 
   const { isAuthenticated, isLoading, user } = useAuth0();
-
+//console.log(user?.email)
+ 
+ 
+    
 
   useEffect(() => {
     if (isAuthenticated) {

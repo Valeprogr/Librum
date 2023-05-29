@@ -63,7 +63,7 @@ const maxScrollWidth = useRef(0);
       setCurrentIndex((prevState) => prevState - 1);
     }
   };
-    console.log(carousel)
+    //console.log(carousel)
 
   const moveNext = () => {
     if (
