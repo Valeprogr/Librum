@@ -20,7 +20,7 @@ const BookCard = ({ clickEvent, props }: IBookCard, key: number) => {
         <p className='text-[15px] text-dark/80 line-clamp-4'>{props.description}</p>
         <div className="flex justify-between items-center pt-2">
           <button className="text-[14px] rounded-lg font-bold text-card p-2 px-4 bg-dark border-none shadow-md hover:bg-hover" onClick={() => increaseCartQuantity(props._id, props.author,props.title, props.price,props.imageUrl)}>Add to Cart</button>
-          <button onClick={clickEvent} className="hover:bg-dark/10 rounded-lg transition-all duration-300 p-1.5 px-4 text-[16px] font-bold">Read more... </button>
+          <a href={`/book/${props._id}`}><button  className="hover:bg-dark/10 rounded-lg transition-all duration-300 p-1.5 px-4 text-[16px] font-bold">Read more... </button></a>
         </div>
       </div>
     </div>
