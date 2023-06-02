@@ -47,7 +47,6 @@ const BooksPage = () => {
           <CTAButton  cssProps='text-[14px]' value={'biography'} clickEvent ={(e:any)=>categoryHadler(e)}>Biography</CTAButton>
           <CTAButton  cssProps='text-[14px]' value={'fantasy'} clickEvent ={(e:any)=>categoryHadler(e)}>Fantasy</CTAButton>
           <CTAButton  cssProps='text-[14px]' value={'horror'} clickEvent ={(e:any)=>categoryHadler(e)}>Horror</CTAButton>
-          <CTAButton  cssProps='text-[14px]' value={'literature'} clickEvent ={(e:any)=>categoryHadler(e)}>Literature</CTAButton>
           <CTAButton  cssProps='text-[14px]' value={'romance'} clickEvent ={(e:any)=>categoryHadler(e)}>Romance</CTAButton>
           <CTAButton  cssProps='text-[14px]' value={'thriller'} clickEvent ={(e:any)=>categoryHadler(e)}>Thriller</CTAButton>
         </div>
