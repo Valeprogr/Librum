@@ -46,7 +46,7 @@ const BookPageInfo = () => {
                                 <div className="mt-3 flex flex-col md:flex-row ">
                                 <button className="w-full md:w-auto text-[14px] rounded-lg font-bold text-card p-2 px-4 bg-dark border-none shadow-md hover:bg-hover mr-3">Add to Cart
                                 </button>
-                                <button className="w-full md:w-auto text-[14px] bg-blue-600 hover:bg-blue-700 text-white font-bold p-2 px-4 rounded-lg">Write a Message</button>
+                                <a href={`mailto:user@user.com`}><button className="w-full md:w-auto text-[14px] bg-blue-600 hover:bg-blue-700 text-white font-bold p-2 px-4 rounded-lg">Write a Message</button></a>
                                 </div>
 
                             </div>
