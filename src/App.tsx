@@ -29,12 +29,13 @@ function App() {
                 <Route path='/location' element={<LocationPage />} />
                 <Route path='/login' element={<LoginPage />} />
                 <Route path='/sign-up' element={<SignUpPage />} />
-                <Route path='/edit-profil' element={<EditProfilePage />} />
+                
                 <Route path='/books' element={<BooksPage />} />
                 <Route path='/book/:id' element={<BookPageInfo />} />
                 <Route path='/profile' element={<Profile />} />
                 <Route path='/cart' element={<Cart />} />
                 <Route path='/create-product' element={<CreateProduct />} />
+                <Route path='/edit-profil' element={<EditProfilePage />} />
               </Routes>
             </div>
           </BrowserRouter>
@@ -50,6 +51,7 @@ function App() {
                 <Route path='/sign-up' element={<SignUpPage />} />
                 <Route path='/books' element={<BooksPage />} />
                 <Route path='/book/:id' element={<BookPageInfo />} />
+                <Route path='/create-product' element={<CreateProduct />} />
               </Routes>
             </div>
           </BrowserRouter>
