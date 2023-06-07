@@ -4,6 +4,7 @@ import BookCard from "../components/BookCard";
 
 const SearchedPage = () => {
     const { book } = useParams();
+    console.log(book)
     return (
         <>
             <h1>Here come the books cards</h1>

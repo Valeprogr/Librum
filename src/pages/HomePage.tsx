@@ -1,5 +1,5 @@
 import Carousel from "../components/Carousel";
-import Searchbar from "../components/spinner/Searchbar";
+import Searchbar from "../components/Searchbar";
 
 const image = "../home/home.png";
 const style:any = {
