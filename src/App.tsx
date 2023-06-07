@@ -1,11 +1,10 @@
-import { AboutPage, BooksPage, EditProfilePage, HomePage, LocationPage, LoginPage, SignUpPage, Cart, CreateProduct } from './pages';
+import { AboutPage, BooksPage, EditProfilePage, HomePage, LocationPage, LoginPage, SignUpPage, Cart, CreateProduct, Profile, SearchedPage,BookPageInfo } from './pages';
 import { BrowserRouter, json, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Profile from './pages/Profile';
 import { useAuth0 } from '@auth0/auth0-react';
 import { Spinner } from './components/spinner/Spinner';
 import { ShoppingCartProvider } from './context/ShoppingCartContext';
-import BookPageInfo from './pages/BookPageInfo';
+
 
 
 
@@ -29,9 +28,9 @@ function App() {
                 <Route path='/location' element={<LocationPage />} />
                 <Route path='/login' element={<LoginPage />} />
                 <Route path='/sign-up' element={<SignUpPage />} />
-                
                 <Route path='/books' element={<BooksPage />} />
                 <Route path='/book/:id' element={<BookPageInfo />} />
+                <Route path='/search/:book' element={<SearchedPage />} />
                 <Route path='/profile' element={<Profile />} />
                 <Route path='/cart' element={<Cart />} />
                 <Route path='/create-product' element={<CreateProduct />} />
@@ -51,6 +50,7 @@ function App() {
                 <Route path='/sign-up' element={<SignUpPage />} />
                 <Route path='/books' element={<BooksPage />} />
                 <Route path='/book/:id' element={<BookPageInfo />} />
+                <Route path='/search/:book' element={<SearchedPage />} />
                 <Route path='/create-product' element={<CreateProduct />} />
               </Routes>
             </div>
