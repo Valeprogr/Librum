@@ -15,7 +15,8 @@ const SearchedPage = () => {
     useEffect(() => {
         const getData = async () => {
             try {
-              let data = await BookDataService.getAll() as any
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                let data= await BookDataService.getAll() as any
                 data = await data.data.books
                 //console.log(data)
                 const result = await data.filter((ele: bookProps) => ele.title.includes(book as string))

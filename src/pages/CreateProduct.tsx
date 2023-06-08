@@ -5,11 +5,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useAuth0 } from "@auth0/auth0-react";
 import LoginButton from "../components/LoginButton";
 
+
 const placeholder = "e.g 12.99";
 
 export const CreateProduct = () => {
-    const { isAuthenticated } = useAuth0();
-    const [error, setError]:any = useState(null);
+    const { isAuthenticated, user } = useAuth0();
     const [form, setForm] = useState({
         title: "",
         author: "",
@@ -17,7 +17,8 @@ export const CreateProduct = () => {
         genre: "",
         stock: 0,
         imageUrl: "",
-        price:''
+        price: "",
+        email: user?.email as string
     });
     
     const changeHandler = (event: React.ChangeEvent<HTMLInputElement> & React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -28,10 +29,13 @@ export const CreateProduct = () => {
     const saveProductHandler = async(event: React.MouseEvent<HTMLElement>) => {
         event.preventDefault();
         try { 
-            let data = await BookDataService.create(form);
+            if (user?.email) {
+             BookDataService.create(form);
             toast.success('Succes! Your book has been added 📖',{
-                position: toast.POSITION.TOP_CENTER
-            })
+                position: toast.POSITION.TOP_CENTER 
+            }
+
+            )}
             setTimeout(() => {
               setForm({
                 title: "",
@@ -40,17 +44,18 @@ export const CreateProduct = () => {
                 genre: "",
                 stock: 0,
                 imageUrl: "",
-                price:''
+                price: "",
+                email: user?.email as string
             })  
             },1000)
-        } catch (error:any) {
+        } catch (error:unknown) {
             toast.error('Information missing!',{
                 position: toast.POSITION.TOP_CENTER
             })
         }
     }
 
- console.log(isAuthenticated)
+ //console.log(form)
     
     return (
         <>
@@ -86,14 +91,14 @@ export const CreateProduct = () => {
                 <div className=" flex flex-col items-center px-10 md:px-0 py-32  md:py-64">
                     <div className="inline-flex items-center">
                     <p className="text-3xl font-bold text-center mr-4">Login Required</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-8 h-8 ">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8 ">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
 </svg>
 
                     </div>
                     
 
-                    <p className="text-xl font-[500] mt-4">You can't see the submission data for this form,  Please login first.</p>
+                    <p className="text-xl font-[500] mt-4">You can`t see the submission data form ,  Please login first.</p>
                     <div className="mt-8">
                      <LoginButton />   
                     </div>

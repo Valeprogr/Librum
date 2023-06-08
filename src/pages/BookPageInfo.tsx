@@ -4,13 +4,14 @@ import BookDataService from "../services/BookService";
 import { bookProps } from "../types/BookProps";
 const BookPageInfo = () => {
     const { id } = useParams<{ id?: string }>();
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [book, setBook] = useState <bookProps | any>(null);
 
     useEffect(() => {
         const getData = async () => {
           try {
-            let data = await BookDataService.get(id as string)
-            console.log(data)
+            const data = await BookDataService.get(id as string)
+            //console.log(data)
               setBook(data)
           }
           catch (error) {
@@ -46,7 +47,7 @@ const BookPageInfo = () => {
                                 <div className="mt-3 flex flex-col md:flex-row ">
                                 <button className="w-full md:w-auto text-[14px] rounded-lg font-bold text-card p-2 px-4 bg-dark border-none shadow-md hover:bg-hover mr-3">Add to Cart
                                 </button>
-                                <a href={`mailto:user@user.com`}><button className="w-full md:w-auto text-[14px] bg-blue-600 hover:bg-blue-700 text-white font-bold p-2 px-4 rounded-lg">Write a Message</button></a>
+                                <a href={`mailto:${book.data.book.email}`}><button className="w-full md:w-auto text-[14px] bg-blue-600 hover:bg-blue-700 text-white font-bold p-2 px-4 rounded-lg">Write a Message</button></a>
                                 </div>
 
                             </div>

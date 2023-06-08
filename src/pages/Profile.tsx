@@ -4,7 +4,7 @@ import { Spinner } from "../components/spinner/Spinner";
 
 
 export const Profile = () => {
-    const { user, isAuthenticated, isLoading } = useAuth0();
+    const { user, isLoading } = useAuth0();
    //console.log(user)
 
     if (isLoading) {

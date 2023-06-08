@@ -1,30 +1,31 @@
-import { ReactNode, createContext, useContext,useState } from "react"
-import { bookProps } from "../types/BookProps"
+import { ReactNode, createContext, useContext } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
+
+
 type ShoppingCartProviderProps = {
     children: ReactNode
 }
 
 type ShoppingCartContext = {
 
-    getItemQuantity: (id: string) => number
+    getItemQuantity: (id: string | undefined) => number
     increaseCartQuantity: (
-        id: any,
+        id: string | undefined,
         author: string,
         title: string,
         imageUrl: string,
-        price: any) => void
-        removeFromCart: (id: any) => void
+        price: string)  => void
+        removeFromCart: (id: string | undefined) => void
         cartQuantity: number
         cartItems: CartItem[]
 }
 
 type CartItem = {
-    id: any
+    id: string
     quantity: number
     author: string
     title: string
-    price: any
+    price: string
     imageUrl: string
 }
 
@@ -47,9 +48,9 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         return cartItems.find(item => item.id === id)?.quantity || 0
     }
 
-    function increaseCartQuantity(id:any, author:string, title:string, price:string, imageUrl:string) {
+    function increaseCartQuantity(id:string, author:string, title:string, price:string, imageUrl:string ) {
         setCartItems(currItems => {
-            if (currItems.find(item => item.id === id._id) == null) {
+            if (currItems.find(item  => item.id === id._id) == null) {
                 return [...currItems, {id, quantity: 1, author, title, price,imageUrl }]
             } else {
                 return currItems.map(item => {
@@ -63,7 +64,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         })   
     }
 
-    function removeFromCart(id: any) {
+    function removeFromCart(id: string) {
         setCartItems(currItems => {
             return currItems.filter(item => item !== id)
         })

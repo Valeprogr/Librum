@@ -13,12 +13,12 @@ class BookDataService {
     get(id: string) {
         return http.get<bookProps>(`books/book/${id}`)
     }
-    patch(data:bookProps, id: any) {
-        return http.patch<any>(`books/editBook/${id}`, data)
+    patch(data:bookProps, id: string) {
+        return http.patch<string>(`books/editBook/${id}`, data)
     }
 
     delete(id: string) {
-        return http.delete<any>(`books/deleteBook/${id}`)
+        return http.delete<string>(`books/deleteBook/${id}`)
     }
 }
 

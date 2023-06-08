@@ -2,7 +2,7 @@ import Carousel from "../components/Carousel";
 import Searchbar from "../components/Searchbar";
 
 const image = "../home/home.png";
-const style:any = {
+const style: object = {
   backgroundImage: `url(${image})`,
   backgroundSize: 'cover',
   height: '800px',

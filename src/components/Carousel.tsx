@@ -74,7 +74,7 @@ const maxScrollWidth = useRef(0);
     }
   };
 
-  const isDisabled = (direction:any) => {
+  const isDisabled = (direction:unknown) => {
     if (direction === 'prev') {
       return currentIndex <= 0;
     }

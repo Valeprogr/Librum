@@ -21,7 +21,7 @@ const Navbar = () => {
     books: ''
 });
 
-  const { isAuthenticated, isLoading, user } = useAuth0();
+  const { isAuthenticated, user } = useAuth0();
 //console.log(user?.email)
  
  

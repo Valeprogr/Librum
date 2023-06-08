@@ -3,7 +3,7 @@ interface CTAButton {
     cssProps?: string;
     children: React.ReactNode;
     value?: string;
-    clickEvent?: (e: any) => void;
+    clickEvent?: (e : React.MouseEvent<HTMLElement>) => void | undefined;
   
 }
 
