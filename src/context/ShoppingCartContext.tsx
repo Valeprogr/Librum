@@ -8,14 +8,14 @@ type ShoppingCartProviderProps = {
 
 type ShoppingCartContext = {
 
-    getItemQuantity: (id: string | undefined) => number
+    getItemQuantity: (id: string) => number
     increaseCartQuantity: (
-        id: string | undefined,
+        id: string,
         author: string,
         title: string,
         imageUrl: string,
         price: string)  => void
-        removeFromCart: (id: string | undefined) => void
+        removeFromCart: (id: string) => void
         cartQuantity: number
         cartItems: CartItem[]
 }
