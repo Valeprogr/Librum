@@ -14,7 +14,7 @@ const BookCard = ( {props} : IBookCard) => {
   console.log(props._id)
 
   return (
-    <div key={props._id} className='w-[290px] flex flex-col justify-start py-2 pt-8 items-center px-4'>
+    <div key={props._id} className='w-[290px] flex flex-col  justify-start py-2 pt-8 items-center px-4'>
       <img src={props.imageUrl} alt='book' className='w-[290px] h-[360px]  rounded-lg bg-card p-5 ' />
       <div className='pt-3'>
         <h2 className='text-[20px] font-[500]'>{props.title}</h2>

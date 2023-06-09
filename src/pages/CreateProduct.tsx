@@ -73,13 +73,13 @@ export const CreateProduct = () => {
             <label className='font-bold'>Author :  *</label>
             <input className='h-10 border mt-1 rounded px-4 w-full bg-gray-50' type="text" name="author" value={form.author} onChange={changeHandler} required></input>
             <label className='font-bold'>Description :  *</label>
-            <textarea  className=' border mt-1 rounded px-4 w-full bg-gray-50' type="textarea"  placeholder="write a little summary..." rows="6"   name="description" value={form.description}  onChange={changeHandler} required></textarea>
+                                <textarea className=' border mt-1 rounded px-4 w-full bg-gray-50' type="textarea" placeholder="write a little summary..." rows={6}   name="description" value={form.description}  onChange={changeHandler} required></textarea>
             <label className='font-bold'>Genre : *</label>
             <input className='h-10 border mt-1 rounded px-4 w-full bg-gray-50' type="text" name="genre" value={form.genre} onChange={changeHandler} required></input>
             <label className='font-bold'>Stock : *</label>
             <input className='h-10 border mt-1 rounded px-4 w-full bg-gray-50' type="text" name="stock" value={form.stock} onChange={changeHandler} required></input>
             <label className='font-bold'>Price : *</label>
-            <input className='h-10 border mt-1 rounded px-4 w-full bg-gray-50' type="text" name="price" value={form.price} placeholder={placeholder} onChange={changeHandler} required></input>
+            <input className='h-10 border mt-1 rounded px-4 w-full bg-gray-50' type="text" name="price" value={form.price} placeholder={placeholder} onChange={changeHandler} ></input>
             <label className='font-bold'>Url Image :  *</label>
             <input className='h-10 border mt-1 rounded px-4 w-full bg-gray-50' type="text" name="imageUrl" value={form.imageUrl} onChange={changeHandler} required></input>
         </form>  

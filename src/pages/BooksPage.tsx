@@ -61,7 +61,7 @@ const BooksPage = () => {
     <>
       {data ?
         
-        <div className="flex  items-center justify-center">
+        <div className="flex  items-center justify-center w-auto">
         <div className="max-w-[1300px] w-full flex flex-col justify-start items-center px-[24px] md:px-20 pt-6">
           <div className='flex justify-between items-center w-full relative'>
             <h2 className="w-full text-2xl md:text-3xl font-bold">Our Books</h2>

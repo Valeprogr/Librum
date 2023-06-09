@@ -10,12 +10,12 @@ type ShoppingCartContext = {
 
     getItemQuantity: (id: string) => number
     increaseCartQuantity: (
-        id: string,
+        id: string | undefined,
         author: string,
         title: string,
         imageUrl: string,
         price: string)  => void
-        removeFromCart: (id: string) => void
+        removeFromCart: (id: unknown) => void
         cartQuantity: number
         cartItems: CartItem[]
 }
@@ -48,7 +48,8 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         return cartItems.find(item => item.id === id)?.quantity || 0
     }
 
-    function increaseCartQuantity(id:string, author:string, title:string, price:string, imageUrl:string ) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    function increaseCartQuantity(id:any, author:string, title:string, price:string, imageUrl:string ) {
         setCartItems(currItems => {
             if (currItems.find(item  => item.id === id._id) == null) {
                 return [...currItems, {id, quantity: 1, author, title, price,imageUrl }]
@@ -64,7 +65,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         })   
     }
 
-    function removeFromCart(id: string) {
+    function removeFromCart(id: unknown) {
         setCartItems(currItems => {
             return currItems.filter(item => item !== id)
         })
