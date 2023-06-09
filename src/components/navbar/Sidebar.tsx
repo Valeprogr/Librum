@@ -44,7 +44,7 @@ const Sidebar = ({ closeEvent }: Sidebar) => {
                 <NavbarLink clickEvent={closeEvent} cssPropText='text-lg' cssPropImg='w-10 p-2' path='/books' icon='../icons/categories.svg' text='Books' />
                 <NavbarLink clickEvent={closeEvent} cssPropText='text-lg' cssPropImg='w-10 p-2' path='/about' icon='../icons/about.svg' text='About' />
                 <NavbarLink clickEvent={closeEvent} cssPropText='text-lg' cssPropImg='w-10 p-2' path='/location' icon='../icons/location.svg' text='Location' />
-                <NavbarLink clickEvent={closeEvent} cssPropText='text-lg' cssPropImg='w-10 p-2' path='/books' icon='../icons/book.svg' text='Writers' />
+                <NavbarLink clickEvent={closeEvent} cssPropText='text-lg' cssPropImg='w-10 p-2' path='/create-product' icon='../icons/book.svg' text='Create Product' />
                 {isAuthenticated ?
                     <LogoutButton />
                     : <LoginButton />}
