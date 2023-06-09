@@ -15,7 +15,7 @@ const Pagination = ({ booksPerPage, totalBooks,paginate } : IPagination) => {
         <nav className="flex md:col-span-2 lg:col-span-3 justify-center mb-6">
             <ul className="flex items-center  space-x-1">
                 {pageNumbers.map(number => (<li key={number} className='page-item'>
-                    <a onClick={(e: any) => { paginate(number); e.preventDefault(); }} href='!#' className=' px-4 py-2 text-gray-700 bg-gray-200 rounded-md hover:bg-dark hover:text-white'>
+                    <a onClick={(e: React.MouseEvent<HTMLElement>) => { paginate(number); e.preventDefault(); }} href='!#' className=' px-4 py-2 text-gray-700 bg-gray-200 rounded-md hover:bg-dark hover:text-white'>
                         {number}
                     </a>
                 </li>))}

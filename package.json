@@ -7,12 +7,17 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "host": "vite --host"
+    "host": "vite --host",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@auth0/auth0-react": "^2.0.1",
     "@tailwindcss/line-clamp": "^0.4.4",
+    "@typescript-eslint/eslint-plugin": "^5.59.9",
+    "@typescript-eslint/parser": "^5.59.9",
     "axios": "^1.4.0",
+    "eslint": "^8.42.0",
+    "eslint-plugin-react": "^7.32.2",
     "hamburger-react": "^2.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

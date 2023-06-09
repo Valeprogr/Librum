@@ -1,5 +1,5 @@
 import { AboutPage, BooksPage, EditProfilePage, HomePage, LocationPage, LoginPage, SignUpPage, Cart, CreateProduct, Profile, SearchedPage,BookPageInfo } from './pages';
-import { BrowserRouter, json, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import { useAuth0 } from '@auth0/auth0-react';
 import { Spinner } from './components/spinner/Spinner';
@@ -10,7 +10,7 @@ import { ShoppingCartProvider } from './context/ShoppingCartContext';
 
 
 function App() {
-  const { isAuthenticated, isLoading, user } = useAuth0();
+  const { isAuthenticated, isLoading } = useAuth0();
   if (isLoading) {
     return <Spinner />
   }

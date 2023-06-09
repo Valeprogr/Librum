@@ -25,6 +25,7 @@ const Searchbar = () => {
   
   const getData = async () => {
     try {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       let data = await BookDataService.getAll() as any
       data = data.data.books
       //console.log(data)

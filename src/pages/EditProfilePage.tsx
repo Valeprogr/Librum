@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import CTAButton from "../components/CTAButton"
 import Input from "../components/Input"
 

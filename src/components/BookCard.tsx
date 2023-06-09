@@ -1,18 +1,20 @@
-import CTAButton from "./CTAButton";
+/* eslint-disable react/prop-types */
 import { bookProps } from "../types/BookProps";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 
 interface IBookCard {
-  clickEvent?: () => void,
+  clickEvent?: (() => void | undefined) | undefined,
   props: bookProps
 }
 
-const BookCard = ({ clickEvent, props }: IBookCard) => {
-  const { getItemQuantity, increaseCartQuantity} = useShoppingCart();
-  const quantity = getItemQuantity(props._id)
+const BookCard = ( {props} : IBookCard) => {
+  const { increaseCartQuantity} = useShoppingCart();
+ 
+  //const quantity = getItemQuantity(props._id)
+  console.log(props._id)
 
   return (
-    <div key={props._id} className='w-[290px] flex flex-col justify-start py-2 pt-8 items-center px-4'>
+    <div key={props._id} className='w-[290px] flex flex-col  justify-start py-2 pt-8 items-center px-4'>
       <img src={props.imageUrl} alt='book' className='w-[290px] h-[360px]  rounded-lg bg-card p-5 ' />
       <div className='pt-3'>
         <h2 className='text-[20px] font-[500]'>{props.title}</h2>
@@ -26,5 +28,7 @@ const BookCard = ({ clickEvent, props }: IBookCard) => {
     </div>
   )
 }
+
+
 
 export default BookCard

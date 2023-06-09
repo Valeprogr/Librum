@@ -1,4 +1,4 @@
-import { ChangeEvent, RefObject, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useAuth0 } from "@auth0/auth0-react";
 import { GrClose } from "react-icons/gr"
 import NavbarLink from "./NavbarLink"
@@ -18,7 +18,7 @@ const Sidebar = ({ closeEvent }: Sidebar) => {
         email: '',
         books: ''
     });
-    const { isAuthenticated, isLoading, user } = useAuth0();
+    const { isAuthenticated, user } = useAuth0();
 
     useEffect(() => {
         if (isAuthenticated) {
