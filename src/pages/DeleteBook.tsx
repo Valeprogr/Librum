@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const DeleteBook = () => {
     const { id } = useParams<{ id?: string }>();
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [book, setBook] = useState<bookProps | any>(null);
     const navigate = useNavigate();
 
@@ -25,6 +26,7 @@ const DeleteBook = () => {
     }, []);
 
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const deleteHandler = (e: any) => {
         e.preventDefault();
         BookDataService.delete(id as string)
@@ -33,7 +35,7 @@ const DeleteBook = () => {
         },2000)
     }
 
-    const cancelHandler = (e: any) => {
+    const cancelHandler = () => {
         navigate(-1);
     }
 
