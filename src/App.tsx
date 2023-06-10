@@ -1,4 +1,4 @@
-import { AboutPage, BooksPage, HomePage, LocationPage, Cart, CreateProduct, Profile, SearchedPage,BookPageInfo, UserBooks } from './pages';
+import { AboutPage, BooksPage, HomePage, LocationPage, Cart, CreateProduct, Profile, SearchedPage,BookPageInfo, UserBooks, DeleteBook } from './pages';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import { useAuth0 } from '@auth0/auth0-react';
@@ -33,6 +33,7 @@ function App() {
                 <Route path='/cart' element={<Cart />} />
                 <Route path='/create-product' element={<CreateProduct />} />
                 <Route path='/user-books' element={<UserBooks />} />
+                <Route path='/delete-book/:id' element={<DeleteBook/>} />
               </Routes>
             </div>
           </BrowserRouter>
