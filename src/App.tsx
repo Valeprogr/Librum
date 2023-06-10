@@ -1,4 +1,4 @@
-import { AboutPage, BooksPage, EditProfilePage, HomePage, LocationPage, LoginPage, SignUpPage, Cart, CreateProduct, Profile, SearchedPage,BookPageInfo } from './pages';
+import { AboutPage, BooksPage, HomePage, LocationPage, Cart, CreateProduct, Profile, SearchedPage,BookPageInfo, UserBooks } from './pages';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import { useAuth0 } from '@auth0/auth0-react';
@@ -26,15 +26,13 @@ function App() {
                 <Route path='/' element={<HomePage />} />
                 <Route path='/about' element={<AboutPage />} />
                 <Route path='/location' element={<LocationPage />} />
-                <Route path='/login' element={<LoginPage />} />
-                <Route path='/sign-up' element={<SignUpPage />} />
                 <Route path='/books' element={<BooksPage />} />
                 <Route path='/book/:id' element={<BookPageInfo />} />
                 <Route path='/search/:book' element={<SearchedPage />} />
                 <Route path='/profile' element={<Profile />} />
                 <Route path='/cart' element={<Cart />} />
                 <Route path='/create-product' element={<CreateProduct />} />
-                <Route path='/edit-profil' element={<EditProfilePage />} />
+                <Route path='/user-books' element={<UserBooks />} />
               </Routes>
             </div>
           </BrowserRouter>
@@ -46,8 +44,6 @@ function App() {
                 <Route path='/' element={<HomePage />} />
                 <Route path='/about' element={<AboutPage />} />
                 <Route path='/location' element={<LocationPage />} />
-                <Route path='/login' element={<LoginPage />} />
-                <Route path='/sign-up' element={<SignUpPage />} />
                 <Route path='/books' element={<BooksPage />} />
                 <Route path='/book/:id' element={<BookPageInfo />} />
                 <Route path='/search/:book' element={<SearchedPage />} />
