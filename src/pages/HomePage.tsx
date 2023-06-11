@@ -22,7 +22,7 @@ const HomePage = () => {
         </div>  
       </div>
       <div style={style}>
-        <div className="absolute w-auto xl:w-[500px] bg-black opacity-80 xl:bg-transparent lg:opacity-100  xl:right-5 2xl:right-60 top-20 2xl:top-40 right-0 border border-white p-10">
+        <div className="absolute w-auto xl:w-[500px] bg-black opacity-80 xl:bg-transparent lg:opacity-100  xl:right-5 2xl:right-60 top-20 2xl:top-32 right-0 border border-white p-10">
           <h1 className="text-5xl font-bold mb-4">Welcome to Librum</h1>
           <p className="leading-7">Librum is a platform created to resell second-hand paper books in excellent condition. 
 Here you can find a wide selection of books from novels to thrillers and there are really all varieties.
