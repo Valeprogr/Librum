@@ -43,17 +43,14 @@ const BooksPage = () => {
     setCategory(books)
     
   }
-  //console.log(category)
+
 
   //Get current Post
   const indexLastBook = currentPage * booksPerPage;
-  console.log(indexLastBook)
   const indexOfFirstBook = indexLastBook - booksPerPage;
-  console.log(indexOfFirstBook)
   const currentBooksGeneral = data.slice(indexOfFirstBook, indexLastBook);
   const currentBooksPerCategory = category.slice(indexOfFirstBook, indexLastBook);
 
-  console.log(currentBooksGeneral)
   
   //Change Page
   const paginate = (pageNumber:number) => setCurrentPage(pageNumber);

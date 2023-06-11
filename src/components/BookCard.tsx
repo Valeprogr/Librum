@@ -11,7 +11,7 @@ const BookCard = ( {props} : IBookCard) => {
   const { increaseCartQuantity} = useShoppingCart();
  
   //const quantity = getItemQuantity(props._id)
-  console.log(props._id)
+
 
   return (
     <div key={props._id} className='w-[290px] flex flex-col  justify-start py-2 pt-8 items-center px-4'>
