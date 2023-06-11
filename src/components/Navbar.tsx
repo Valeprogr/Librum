@@ -83,6 +83,8 @@ const Navbar = () => {
                   <NavbarLink cssPropText='text-[14px]' cssPropImg='p-2 w-8' clickEvent={userCloseHandler} path='/create-product' text='Create Product' icon='../icons/createProduct.svg' />
                   <NavbarLink cssPropText='text-[14px]' cssPropImg='p-2 w-8' clickEvent={userCloseHandler} path='/user-books' text='User Books' icon='../icons/orders.svg' />
                   <NavbarLink cssPropText='text-[14px]' cssPropImg='p-2 w-8' clickEvent={userCloseHandler} path='/profile' text='Profile' icon='../icons/editProfil.svg' />
+                  
+                      
   
                 </div>
               )

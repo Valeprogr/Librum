@@ -37,16 +37,20 @@ const Sidebar = ({ closeEvent }: Sidebar) => {
 
     return (
 
-        <div ref={element} className='absolute  top-0 right-0 w-[240px] h-screen max-h-screen  bg-card shadow-lg animation_right flex items-center justify-between flex-col px-5 py-12 pt-16 z-10'>
+        <div ref={element} className='absolute  top-0 right-0 w-[240px] h-screen max-h-screen  bg-card shadow-lg animation_right flex items-center justify-between flex-col px-5 py-12 pt-10 z-10'>
             <button className='absolute top-4 right-4'><GrClose className='text-2xl font-bold' onClick={closeEvent} /></button>
-            <div className="flex flex-col  w-full pt-2">
+            <div className="flex flex-col  w-full pt-2 mb-4">
                 <NavbarLink clickEvent={closeEvent} cssPropText='text-lg' cssPropImg='w-10 p-2' path='/' icon='../icons/home.svg' text='Home' />
                 <NavbarLink clickEvent={closeEvent} cssPropText='text-lg' cssPropImg='w-10 p-2' path='/books' icon='../icons/categories.svg' text='Books' />
                 <NavbarLink clickEvent={closeEvent} cssPropText='text-lg' cssPropImg='w-10 p-2' path='/about' icon='../icons/about.svg' text='About' />
                 <NavbarLink clickEvent={closeEvent} cssPropText='text-lg' cssPropImg='w-10 p-2' path='/location' icon='../icons/location.svg' text='Location' />
-                <NavbarLink clickEvent={closeEvent} cssPropText='text-lg' cssPropImg='w-10 p-2' path='/create-product' icon='../icons/book.svg' text='Create Product' />
                 {isAuthenticated ?
-                    <LogoutButton />
+                    <>
+                        <NavbarLink clickEvent={closeEvent} cssPropText='text-lg' cssPropImg='w-10 p-2' path='/create-product' icon='../icons/book.svg' text='Create Product' />
+                        <NavbarLink clickEvent={closeEvent} cssPropText='text-lg' cssPropImg='w-10 p-2' path='/user-books' icon='../icons/book.svg' text='User Books' />
+                        <NavbarLink clickEvent={closeEvent} cssPropText='text-lg' cssPropImg='w-10 p-2' path='/profile' icon='../icons/book.svg' text='Profile' />
+                        <LogoutButton />
+                        </>
                     : <LoginButton />}
             </div>
             <div className="flex gap-4">
