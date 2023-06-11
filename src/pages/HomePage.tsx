@@ -24,7 +24,9 @@ const HomePage = () => {
       <div style={style}>
         <div className="absolute w-auto xl:w-[500px] bg-black opacity-80 xl:bg-transparent lg:opacity-100  xl:right-5 2xl:right-60 top-20 2xl:top-40 right-0 border border-white p-10">
           <h1 className="text-5xl font-bold mb-4">Welcome to Librum</h1>
-          <p className="leading-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis fugiat architecto veritatis ab! Odio maxime eum minus odit distinctio nam ut explicabo. Numquam error obcaecati distinctio magni reprehenderit, explicabo ipsum! Dolorum nobis quae aliquid earum provident ipsam nemo ea quia, quos in.</p>
+          <p className="leading-7">Librum is a platform created to resell second-hand paper books in excellent condition. 
+Here you can find a wide selection of books from novels to thrillers and there are really all varieties.
+We all know buying a new book is not always eco-sustainable and we at Librum Team care a lot about our planet and that`s exactly why we give the opportunity to resell old editions or books you don´t want to have anymore.</p>
           <p className="text-xl font-mono mt-4">Knowledge is power</p>
           <p className="text-l font-mono">Sir Francis Bacon</p>
         </div>
