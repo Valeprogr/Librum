@@ -45,6 +45,10 @@ const Navbar = () => {
     if (burgerOpen === true) {
       document.body.style.overflow = 'hidden';
     }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    }
   }, [burgerOpen])
 
   return (
