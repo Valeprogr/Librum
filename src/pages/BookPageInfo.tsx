@@ -2,10 +2,23 @@ import React,{ useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import BookDataService from "../services/BookService";
 import { bookProps } from "../types/BookProps";
+import { useShoppingCart } from "../context/ShoppingCartContext";
+import { useAuth0 } from "@auth0/auth0-react";
+
 const BookPageInfo = () => {
     const { id } = useParams<{ id?: string }>();
+    const { isAuthenticated } = useAuth0();
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const [book, setBook] = useState <bookProps | any>(null);
+    const [book, setBook] = useState<bookProps | any>(null);
+    const { increaseCartQuantity } = useShoppingCart();
+    
+    const addBookHandler = () => {
+        if (isAuthenticated) {
+            increaseCartQuantity(book.data.book._id, book.data.book.author,book.data.book.title, book.data.book.price,book.data.book.imageUrl)
+        } else {
+            alert('Please Loging first before add books to the cart')
+        }
+    }
 
     useEffect(() => {
         const getData = async () => {
@@ -45,7 +58,7 @@ const BookPageInfo = () => {
                                     <em className="text-xs font-light">*Text the seller to finalize the purchase.</em>
                                 </div>
                                 <div className="mt-3 flex flex-col md:flex-row ">
-                                <button className="w-full md:w-auto text-[14px] rounded-lg font-bold text-card p-2 px-4 bg-dark border-none shadow-md hover:bg-hover mr-3">Add to Cart
+                                <button className="w-full md:w-auto text-[14px] rounded-lg font-bold text-card p-2 px-4 bg-dark border-none shadow-md hover:bg-hover mr-3" onClick={() => addBookHandler()}>Add to Cart
                                 </button>
                                 <a href={`mailto:${book.data.book.email}`}><button className="w-full md:w-auto text-[14px] bg-blue-600 hover:bg-blue-700 text-white font-bold p-2 px-4 rounded-lg">Write a Message</button></a>
                                 </div>

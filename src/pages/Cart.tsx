@@ -2,11 +2,9 @@ import { useShoppingCart } from "../context/ShoppingCartContext";
 
 
 export const Cart = () => {
-    const { cartItems,cartQuantity,removeFromCart } = useShoppingCart();
-
-  //console.log(cartItems)
-        
-        return (
+    const { cartItems, cartQuantity, removeFromCart } = useShoppingCart();
+  //console.log(cartItems)   
+    return (    
             <div className="py-12 flex flex-col items-center w-auto">
                 <h1 className="text-4xl mb-8">Cart Book List</h1>
                 {cartItems.map(ele =>
