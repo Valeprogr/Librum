@@ -16,7 +16,7 @@ const Searchbar = () => {
       return data
     }
 
-    return data.filter(ele => ele.title.includes(query))
+    return data.filter(ele => ele.title.includes(query.toLowerCase()))
   }
   
   useEffect(() => {
