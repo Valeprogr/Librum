@@ -1,5 +1,8 @@
+import { useEffect } from "react";
 import Carousel from "../components/Carousel";
 import Searchbar from "../components/Searchbar";
+import { useAuth0 } from "@auth0/auth0-react";
+import  userDataServices  from "../services/UserService";
 
 const image = "../home/home.png";
 const style: object = {
@@ -12,6 +15,28 @@ const style: object = {
   color: "white"
 }
 const HomePage = () => {
+  const { user, isAuthenticated } = useAuth0();
+  const userEmail = {
+    email : user?.email as string
+  }
+
+  const checkDataBase = async (userEmail: any) => {
+      if (userEmail.email !== "") {
+        const email = await userDataServices.create(userEmail)
+        //console.log(email)
+      }
+    
+
+   
+  }
+  useEffect(() => {
+    if (isAuthenticated) {
+      checkDataBase(userEmail)
+    }
+  },[])
+  
+  
+  
   return (
     <div className="h-auto w-auto px-[24px] md:px-20 ">
       <div className="flex flex-col lg:flex-row lg:justify-between container lg:mx-10 py-3 border-b border-gray-300">
