@@ -24,6 +24,23 @@ const Navbar = () => {
   const { isAuthenticated, user } = useAuth0();
 //console.log(user?.email)
  
+const userMenuLinks = [
+  {
+    icon:'../icons/createProduct.svg',
+    text: 'Create Product',
+    path: "/create-product",
+  },
+  {
+    icon: '../icons/orders.svg',
+    text: 'User Books',
+    path: '/user-books',
+  },
+  {
+    icon: '../icons/editProfil.svg',
+    text: 'Profile',
+    path: '/profile',
+  },
+]
  
     
 
@@ -84,9 +101,14 @@ const Navbar = () => {
             {
               userOpen && (
                 <div className='absolute bg-card shadow-md top-12 right-0 p-4 rounded-lg transition-all duration-300 '>
-                  <NavbarLink cssPropText='text-[14px]' cssPropImg='p-2 w-8' clickEvent={userCloseHandler} path='/create-product' text='Create Product' icon='../icons/createProduct.svg' />
-                  <NavbarLink cssPropText='text-[14px]' cssPropImg='p-2 w-8' clickEvent={userCloseHandler} path='/user-books' text='User Books' icon='../icons/orders.svg' />
-                  <NavbarLink cssPropText='text-[14px]' cssPropImg='p-2 w-8' clickEvent={userCloseHandler} path='/profile' text='Profile' icon='../icons/editProfil.svg' />
+                  {
+                    userMenuLinks.map((link, index) => (
+                      <Link to={link.path} key={index} className='flex  justify-left w-full px-6 items-center cursor-pointer p-3  hover:bg-dark/10 rounded-lg transition-all duration-300 gap-4 text-left' onClick={userCloseHandler}>
+                        <img src={link.icon} alt={link.text} className='w-8 h-8 bg-dark p-2 rounded-lg' />
+                        {link.text}
+                      </Link>
+                    ))
+                  }
                   
                       
   
