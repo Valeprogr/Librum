@@ -15,7 +15,7 @@ const BooksPage = () => {
 
   const [category, setCategory] = useState<bookProps[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [booksPerPage] = useState(6);
+  const [booksPerPage] = useState(12);
 
 
   useEffect(() => {
@@ -59,7 +59,7 @@ const BooksPage = () => {
     <>
       {data ?
         
-        <div className="flex  items-center justify-center w-auto">
+        <div className="h-full flex  items-center justify-center w-auto">
         <div className="max-w-[1300px] w-full flex flex-col justify-start items-center px-[24px] md:px-20 pt-6">
           <div className='flex justify-between items-center w-full relative'>
               <h2 className="w-full text-2xl md:text-3xl font-bold">{ categoriesOpen ? `All ${categoryName} Books` : `All Books`}</h2>
@@ -73,7 +73,7 @@ const BooksPage = () => {
             <CTAButton  cssProps='text-[14px]' value={'thriller'} clickEvent ={(e: React.MouseEvent<HTMLElement>)=>categoryHadler(e)}>Thriller</CTAButton>
             </div>
         
-          <div className='pt-4 pl-14 md:pl-0 grid md:grid-cols-2 lg:grid-cols-3 gap-10 items-center justify-center'>
+          <div className='pt-4  md:pl-0 grid md:grid-cols-2 lg:grid-cols-3 gap-10 items-center justify-center'>
               {categoriesOpen  ?
                            <>
                            {currentBooksPerCategory.map((ele: bookProps, index: number) => (<BookCard props={ele} key={index} />))}
