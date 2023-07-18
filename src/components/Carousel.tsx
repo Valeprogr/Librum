@@ -2,52 +2,62 @@ import React,{useState, useEffect,useRef} from "react";
 
 const Carousel = () => {
     const resources = [
-        {
+      {
+            "id":"64662e9a86b3b2d2e5487540",
             "title": "Murder on the orient express",
             "author": "Agatha Christie",
             "imageUrl":"https://images.thalia.media/07/-/6aea714dfd9e437ea2f24a3c378b5645/murder-on-the-orient-express-taschenbuch-agatha-christie-englisch.jpeg"
         },
-        {
+      {
+            "id":"649b4034f82e4ffe7237d57d",
             "title": "Death on the nile",
             "author": "Agatha Christie",
             "imageUrl":"https://elzareads.com/wp-content/uploads/sites/403/2022/02/Death-on-the-nile.jpg"
         },
-        {
+      {
+            "id":"649b41e8f82e4ffe7237d581",
             "title": "The Murder of Roger Ackroyd",
             "author": "Agatha Christie",
             "imageUrl":"https://m.media-amazon.com/images/I/819CsusPr3L.jpg"
         },
-        {
+      {
+            "id":"649b4307f82e4ffe7237d584",
             "title": "The Mysterious Affair at Styles",
             "author": "Agatha Christie",
             "imageUrl":"https://m.media-amazon.com/images/I/81nvTKHsi5L.jpg"
         },
-        {
+      {
+            "id":"64b705cda14d776b7c4be36e",
             "title": "Hallowe'en Party",
             "author": "Agatha Christie",
             "imageUrl":"https://m.media-amazon.com/images/I/71gxfalUdaL.jpg"
         },
-        {
+      {
+            "id":"64662e9a86b3b2d2e5487540",
             "title": "Murder on the orient express",
             "author": "Agatha Christie",
             "imageUrl":"https://images.thalia.media/07/-/6aea714dfd9e437ea2f24a3c378b5645/murder-on-the-orient-express-taschenbuch-agatha-christie-englisch.jpeg"
         },
-        {
+      {
+            "id":"649b4034f82e4ffe7237d57d",
             "title": "Death on the nile",
             "author": "Agatha Christie",
             "imageUrl":"https://elzareads.com/wp-content/uploads/sites/403/2022/02/Death-on-the-nile.jpg"
         },
-        {
+      {
+            "id":"649b41e8f82e4ffe7237d581",
             "title": "The Murder of Roger Ackroyd",
             "author": "Agatha Christie",
             "imageUrl":"https://m.media-amazon.com/images/I/819CsusPr3L.jpg"
         },
-        {
+      {
+            "id":"649b4307f82e4ffe7237d584",
             "title": "The Mysterious Affair at Styles",
             "author": "Agatha Christie",
             "imageUrl":"https://m.media-amazon.com/images/I/81nvTKHsi5L.jpg"
         },
-        {
+      {
+            "id":"64b705cda14d776b7c4be36e",
             "title": "Hallowe'en Party",
             "author": "Agatha Christie",
             "imageUrl":"https://m.media-amazon.com/images/I/71gxfalUdaL.jpg"
